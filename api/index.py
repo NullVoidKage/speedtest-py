@@ -12,7 +12,6 @@ def extract_server_name(host):
     else:
         return host
 
-@app.route('/', methods=['GET'])
 def run_speedtest():
     st = speedtest.Speedtest()
 
