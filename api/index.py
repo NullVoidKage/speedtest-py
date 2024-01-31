@@ -12,6 +12,7 @@ def extract_server_name(host):
     else:
         return host
 
+@app.route('/', methods=['GET'])
 def run_speedtest():
     st = speedtest.Speedtest()
 
@@ -46,4 +47,4 @@ def run_speedtest():
     return jsonify(result)
 
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
